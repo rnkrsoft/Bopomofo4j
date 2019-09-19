@@ -7,7 +7,10 @@ import com.rnkrsoft.bopomofo4j.sandbox.v100.SandboxBopomofoKernel;
  * Bopomofo4j拼音库，用于将汉字转换为拼音
  */
 public abstract class Bopomofo4j {
-    static SandboxBopomofoKernel KERNEL = new SandboxBopomofoKernel();
+    /**
+     * Bopomofo4j核心，核心根据运行情况选择核心实现类
+     */
+    final static SandboxBopomofoKernel KERNEL = new SandboxBopomofoKernel();
 
     /**
      * 本地库运行拼音转换库
