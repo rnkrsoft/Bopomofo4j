@@ -17,7 +17,7 @@ public class JSON {
      *
      * @param url URL对象
      * @return 键值对
-     * @throws IOException
+     * @throws IOException IO异常
      */
     public static final Map<String, String> parse(URL url) throws IOException {
         InputStream is = null;

@@ -26,11 +26,6 @@ public class LocalPinyinLibrary implements IPinyinLibrary {
     Map<String, String> cht2chs;
     Map<String, String> chs2cht;
 
-    /**
-     * 初始化拼音库
-     *
-     * @return
-     */
     public LocalPinyinLibrary init() {
         //加载本地的拼音库
         {
@@ -68,12 +63,6 @@ public class LocalPinyinLibrary implements IPinyinLibrary {
         return this;
     }
 
-    /**
-     * 将汉字转换为拼音数组
-     *
-     * @param w 汉字
-     * @return 拼音数组
-     */
     public String[] getPinyins(char w) {
         String py = this.pinyins.get(String.valueOf(w));
         if (py == null) {
@@ -83,15 +72,7 @@ public class LocalPinyinLibrary implements IPinyinLibrary {
         }
     }
 
-    /**
-     * 获取多音字词，返回时返回替换起始位置和结束位置
-     *
-     * @param words              句子
-     * @param current            当前字
-     * @param pos                当前汉字的位置
-     * @param lastPolyphoneIndex 最近一次多音字词组处理索引
-     * @return
-     */
+
     public Polyphone getPolyphoneWord(String words, char current, int pos, int lastPolyphoneIndex) {
         final List<Polyphone> results = new ArrayList<Polyphone>();
         int maxMatchLen = 0;
