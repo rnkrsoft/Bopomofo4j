@@ -21,6 +21,16 @@
 
 ```java
 /**
+ * 本地库运行拼音转换库
+ */
+public static final void local();
+
+/**
+ * 沙盒运行拼音转换库
+ */
+public static final void sandbox();
+
+/**
  * 将汉字句子转换拼音，支持声母带音调，数字音调，无音调三种格式
  *
  * @param words    句子
@@ -30,9 +40,21 @@
  * @param split    分割符号，默认一个空格
  * @return 拼音
  */
-public static final String pinyin(String words, ToneType toneType, Boolean upper, Boolean cap, String split) {
-    //输出拼音
-}
+public static final String pinyin(String words, ToneType toneType, Boolean upper, Boolean cap, String split);
+
+/**
+ * 将繁体中文转换为简体中文
+ * @param words 繁体中文句子
+ * @return 简体中文句子
+ */
+public static final String cht2chs(String words);
+
+/**
+ * 将简体中文转换为繁体中文
+ * @param words 简体中文句子
+ * @return 繁体中文句子
+ */
+public static final String chs2cht(String words);
 ```
 
 
