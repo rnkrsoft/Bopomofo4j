@@ -7,6 +7,17 @@ import org.junit.Test;
  * Created by woate on 2019/9/19.
  */
 public class Bopomofo4jTest {
+    @Test
+    public void testPinyin1() throws Exception {
+        {
+            String py = Bopomofo4j.pinyin("在这里输入你要转换的中文，然后点下面APM（Actions Per Minute）是一个在游戏领域常见的概念", ToneType.WITHOUT_TONE, null, null, null);
+            Assert.assertEquals("zai zhe li shu ru ni yao zhuan huan de zhong wen， ran hou dian xia mianAPM（Actions Per Minute） shi yi ge zai you xi ling yu chang jian de gai nian", py);
+        }
+        {
+            String py = Bopomofo4j.pinyin("在这里输入你要转换的中文，然后点下面APM（Actions Per Minute）是一个在游戏领域常见的概念", ToneType.WITH_VOWEL_TONE, null, null, null);
+            Assert.assertEquals("zài zhè lǐ shū rù nǐ yào zhuǎn huàn de zhōng wén， rán hòu diǎn xià miànAPM（Actions Per Minute） shì yī gè zài yóu xì lǐng yù cháng jiàn de gài niàn", py);
+        }
+    }
 
     @Test
     public void testPinyin() throws Exception {
