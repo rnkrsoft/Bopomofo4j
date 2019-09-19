@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 /**
- * Created by woate on 2019/9/19.
+ * Created by rnkrsoft.com on 2019/9/19.
  */
 public class Bopomofo4jTest {
     @Test

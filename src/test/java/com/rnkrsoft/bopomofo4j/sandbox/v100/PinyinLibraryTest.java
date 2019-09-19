@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
- * Created by woate on 2019/9/19.
+ * Created by rnkrsoft.com on 2019/9/19.
  */
 public class PinyinLibraryTest {
 

@@ -1,7 +1,7 @@
 package com.rnkrsoft.bopomofo4j.protocol;
 
 /**
- * Created by woate on 2019/9/19.
+ * Created by rnkrsoft.com on 2019/9/19.
  * 拼音核心类接口，此接口实现类为热加载实现
  */
 public interface IBopomofoKernel {

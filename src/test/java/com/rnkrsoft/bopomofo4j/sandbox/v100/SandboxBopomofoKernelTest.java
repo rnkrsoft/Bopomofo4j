@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.io.File;
 
 /**
- * Created by woate on 2019/9/19.
+ * Created by rnkrsoft.com on 2019/9/19.
  */
 public class SandboxBopomofoKernelTest {
 

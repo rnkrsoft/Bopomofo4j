@@ -12,7 +12,7 @@ import java.util.ServiceLoader;
 import java.util.UUID;
 
 /**
- * Created by woate on 2019/9/19.
+ * Created by rnkrsoft.com on 2019/9/19.
  * 沙盒加载拼音算法核心
  * 1.首先尝试从Maven中央仓库下载最新版的Bopomofo4j库
  * 2.尝试加载最新版的Bopomofo4j库，如果加载成功，则使用最新版的库实现

@@ -2,7 +2,7 @@ package com.rnkrsoft.bopomofo4j.protocol;
 
 
 /**
- * Created by woate on 2019/9/19.
+ * Created by rnkrsoft.com on 2019/9/19.
  */
 public interface IPinyinLibrary {
     /**
