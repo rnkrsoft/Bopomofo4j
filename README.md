@@ -17,6 +17,7 @@
 ```
 最新版本号见上方，本库支持沙盒模式，即使使用低版本依然可以获取最新的功能实现。
 
+纯JavaScript实现的兄弟库 Bopomofo.js [https://github.com/rnkrsoft/Bopomofo.js](https://github.com/rnkrsoft/Bopomofo.js),可以在HTML上轻松使用Bopomofo.js。同时Bopomofo4j中已经整合Bopomofo.js版本，如果使用embedded-tomcat库可以轻松直接使用Bopomofo.js，路径为/bopomofo/bopomofo.min.js
 ## 1.原理
 1. 获取当前汉字的unicode值，如果在[19968,40869]中文区间，则执行第2步，否则直接输出（可能为符号，数字，英文字母或其他语系）
 2. 检查当前汉字是否在多音字库中，如果存在返回该汉字发音的拼音和汉字序列数组，将当前句子上下文进行序列匹配，如果能够匹配，则为该发音。如果无返回，则进入第三步
