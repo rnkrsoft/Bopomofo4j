@@ -1,5 +1,5 @@
 # Bopomofo4j
-零依赖，纯Java开发的汉字转拼音库，具备沙盒运行模式
+零依赖，纯Java开发的汉字->拼音转换,简体<->繁体互转,具备沙盒运行模式
 1. 实现汉字转拼音
 2. 实现汉语单词转拼音
 3. 实现汉语句子转拼音，在一定程度解决多音字问题
@@ -62,22 +62,38 @@ public static final String chs2cht(String words);
 例如：
 
 ```
-String v1 = Bopomofo4j.pinyin('中国人！',0, false, false, " ");
+//汉语句子->声母音调拼音
+String v1 = Bopomofo4j.pinyin("中国人！",0, false, false, " ");
 System.out.println(v1);//控制台输出 zhōng guǒ rén！
-String v2 = Bopomofo4j.pinyin('患难与共的兄弟！！',1, false, false, " ");
+
+//汉语句子->数字音调拼音
+String v2 = Bopomofo4j.pinyin("患难与共的兄弟！！",1, false, false, " ");
 System.out.println(v2);//控制台输出 huan4 nan4 yu3 gong4 de0 xiong1 di4！！
-String v3 = Bopomofo4j.pinyin('this is a pinyin library!这是一个汉语拼音库！！',2, false, false, " ");
+
+//汉语句子->无音调拼音
+String v3 = Bopomofo4j.pinyin("this is a pinyin library!这是一个汉语拼音库！！",2, false, false, " ");
 System.out.println(v3);//控制台输出 this is a pinyin library! zhe shi yi ge han yu pin yin ku！！
+
+//繁体->简体
+String v4 = Bopomofo4j.cht2chs("APM（Actions Per Minute）是一個在遊戲");
+System.out.println(v4);//APM（Actions Per Minute）是一个在游戏
+
+//简体->繁体
+String v5 = Bopomofo4j.chs2cht("APM（Actions Per Minute）是一个在游戏");
+System.out.println(v5);//APM（Actions Per Minute）是一個在遊戲
 ```
+
 ### 3.1沙盒模式
 Bopomofo4j在此种设置下将访问"[https://repo1.maven.org/maven2/com/rnkrsoft/bopomofo4j/bopomofo4j](https://repo1.maven.org/maven2/com/rnkrsoft/bopomofo4j/bopomofo4j)"中央仓库地址，获取最新发布的Bopomofo4j运行库，获取后以沙盒方式热加载实现，也就是可以实现不更新Bopomofo4j包文件的情况下使用最新的Bopomofo4j实现。可以方便的获取字库更新的功能和逻辑实现。但是要防止[https://repo1.maven.org](https://repo1.maven.org)是否被localhost配置，如果配置有可能存在加载恶意代码的风险，使用时需要特别注意此点。默认情况下Bopomofo4j开启沙盒模式。可以通过以下代码禁用
 ```Java
 Bopomofo4j.local();//启用本地模式（也就是禁用沙盒）
 ```
+
 也可以在运行时启用沙盒
 ```Java
 Bopomofo4j.sandbox();//启用沙盒模式
 ```
+
 沙盒模式和本地模式的切换规则，在沙盒加载远程版本失败以后，要隔1分钟才进行下一次尝试运行沙盒，在这一分钟里Bopomofo4j回退到本地模式运行。
 
 ### 3.1.1强制指定远程版本
