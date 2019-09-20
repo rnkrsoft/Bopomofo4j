@@ -23,7 +23,7 @@ public class Bopomofo4jTest {
     public void testPinyin() throws Exception {
 //        Bopomofo4j.local();
         System.setProperty("bopomofo4j.temp.dir", "./target/temp");
-        System.setProperty("bopomofo4j.sandbox.url", "https://oss.sonatype.org/service/local/repositories/comrnkrsoft-1081/content/com/rnkrsoft/bopomofo4j/bopomofo4j/1.0.0/bopomofo4j-1.0.0.jar");
+//        System.setProperty("bopomofo4j.sandbox.url", "https://oss.sonatype.org/service/local/repositories/comrnkrsoft-1081/content/com/rnkrsoft/bopomofo4j/bopomofo4j/1.0.0/bopomofo4j-1.0.0.jar");
         for (int i = 0; i < 10000; i++) {
             String py1 = Bopomofo4j.pinyin("I am chinese!1234", ToneType.WITHOUT_TONE, null, null, null);
             Assert.assertEquals("I am chinese!1234", py1);
