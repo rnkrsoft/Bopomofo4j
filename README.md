@@ -70,7 +70,7 @@ String v3 = Bopomofo4j.pinyin('this is a pinyin library!这是一个汉语拼音
 System.out.println(v3);//控制台输出 this is a pinyin library! zhe shi yi ge han yu pin yin ku！！
 ```
 ### 沙盒模式
-Bopomofo4j在此种设置下将访问https://repo1.maven.org/maven2/com/rnkrsoft/bopomofo4j/bopomofo4j中央仓库地址，获取最新发布的Bopomofo4j运行库，获取后以沙盒方式热加载实现，也就是可以实现不更新Bopomofo4j包文件的情况下使用最新的Bopomofo4j实现。可以方便的获取字库更新的功能和逻辑实现。但是要防止https://repo1.maven.org是否被localhost配置，如果配置有可能存在加载恶意代码的风险，使用时需要特别注意此点。默认情况下Bopomofo4j开启沙盒模式。可以通过以下代码禁用
+Bopomofo4j在此种设置下将访问"[https://repo1.maven.org/maven2/com/rnkrsoft/bopomofo4j/bopomofo4j](https://repo1.maven.org/maven2/com/rnkrsoft/bopomofo4j/bopomofo4j)"中央仓库地址，获取最新发布的Bopomofo4j运行库，获取后以沙盒方式热加载实现，也就是可以实现不更新Bopomofo4j包文件的情况下使用最新的Bopomofo4j实现。可以方便的获取字库更新的功能和逻辑实现。但是要防止https://repo1.maven.org是否被localhost配置，如果配置有可能存在加载恶意代码的风险，使用时需要特别注意此点。默认情况下Bopomofo4j开启沙盒模式。可以通过以下代码禁用
 ```Java
 Bopomofo4j.local();//启用本地模式（也就是禁用沙盒）
 ```
@@ -80,7 +80,7 @@ Bopomofo4j.sandbox();//启用沙盒模式
 ```
 沙盒模式和本地模式的切换规则，在沙盒加载远程版本失败以后，要隔1分钟才进行下一次尝试运行沙盒，在这一分钟里Bopomofo4j回退到本地模式运行。
 ### 本地模式（禁用沙盒）
-Bopomofo4j在此种设置下将不再访问https://repo1.maven.org/maven2/com/rnkrsoft/bopomofo4j/bopomofo4j中央仓库地址，也就不会下载最新版的Bopomofo4j来运行。如果禁用沙盒，又想更新版本，则只能替换Jar或者修改Maven,Gradle依赖来实现。
+Bopomofo4j在此种设置下将不再访问中央仓库地址"[https://repo1.maven.org/maven2/com/rnkrsoft/bopomofo4j/bopomofo4j](https://repo1.maven.org/maven2/com/rnkrsoft/bopomofo4j/bopomofo4j)"，也就不会下载最新版的Bopomofo4j来运行。如果禁用沙盒，又想更新版本，则只能替换Jar或者修改Maven,Gradle依赖来实现。
 ```Java
 Bopomofo4j.local();//启用本地模式（也就是禁用沙盒）
 ```
