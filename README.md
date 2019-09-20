@@ -6,6 +6,17 @@
 4. 实现简体，繁体互转
 5. 词库实现沙盒模式进行热加载，也可使用本地模式
 
+[![Maven central](https://maven-badges.herokuapp.com/maven-central/com.rnkrsoft.bopomofo4j/bopomofo4j/badge.svg)](http://search.maven.org/#search|ga|1|g%3A%22com.rnkrsoft.bopomofo4j%22%20AND%20a%3A%22bopomofo4j%22)
+
+```xml
+<dependency>
+    <groupId>com.rnkrsoft.bopomofo4j</groupId>
+    <artifactId>bopomofo4j</artifactId>
+    <version>最新版本号</version>
+</dependency>
+```
+最新版本号见上方，本库支持沙盒模式，即使使用低版本依然可以获取最新的功能实现。
+
 ## 1.原理
 1. 获取当前汉字的unicode值，如果在[19968,40869]中文区间，则执行第2步，否则直接输出（可能为符号，数字，英文字母或其他语系）
 2. 检查当前汉字是否在多音字库中，如果存在返回该汉字发音的拼音和汉字序列数组，将当前句子上下文进行序列匹配，如果能够匹配，则为该发音。如果无返回，则进入第三步
