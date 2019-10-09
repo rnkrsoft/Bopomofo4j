@@ -17,7 +17,7 @@
 ```
 最新版本号见上方，本库支持沙盒模式，即使使用低版本依然可以获取最新的功能实现。
 
-官网在线搜索：https://www.rnkrsoft.com/bopomofo，当发现不能正确解析词语读音，可以来这里维护词库，向我们提出申请。
+官网在线搜索：[pinyin.rnkrsoft.com](https://pinyin.rnkrsoft.com) ，当发现不能正确解析词语读音，可以来这里维护词库，向我们提出申请。
 
 纯JavaScript实现的兄弟库 Bopomofo.js [https://github.com/rnkrsoft/Bopomofo.js](https://github.com/rnkrsoft/Bopomofo.js),可以在HTML上轻松使用Bopomofo.js。同时Bopomofo4j中已经整合Bopomofo.js版本，如果使用embedded-tomcat库可以轻松直接使用Bopomofo.js，路径为/bopomofo/bopomofo.min.js
 ## 1.原理
