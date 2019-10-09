@@ -6,6 +6,10 @@
 4. 实现简体，繁体互转
 5. 词库实现沙盒模式进行热加载，也可使用本地模式
 
+# 拼音搜索引擎
+官网在线搜索：[pinyin.rnkrsoft.com](https://pinyin.rnkrsoft.com) ，当发现不能正确解析词语读音，可以来这里维护词库，向我们提出申请。
+
+
 [![Maven central](https://maven-badges.herokuapp.com/maven-central/com.rnkrsoft.bopomofo4j/bopomofo4j/badge.svg)](http://search.maven.org/#search|ga|1|g%3A%22com.rnkrsoft.bopomofo4j%22%20AND%20a%3A%22bopomofo4j%22)
 
 ```xml
@@ -16,8 +20,6 @@
 </dependency>
 ```
 最新版本号见上方，本库支持沙盒模式，即使使用低版本依然可以获取最新的功能实现。
-
-官网在线搜索：[pinyin.rnkrsoft.com](https://pinyin.rnkrsoft.com) ，当发现不能正确解析词语读音，可以来这里维护词库，向我们提出申请。
 
 纯JavaScript实现的兄弟库 Bopomofo.js [https://github.com/rnkrsoft/Bopomofo.js](https://github.com/rnkrsoft/Bopomofo.js),可以在HTML上轻松使用Bopomofo.js。同时Bopomofo4j中已经整合Bopomofo.js版本，如果使用embedded-tomcat库可以轻松直接使用Bopomofo.js，路径为/bopomofo/bopomofo.min.js
 ## 1.原理
