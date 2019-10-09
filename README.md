@@ -80,7 +80,7 @@ public static final String chs2cht(String words);
 ```
 //汉语句子->声母音调拼音
 String v1 = Bopomofo4j.pinyin("中国人！",0, false, false, " ");
-System.out.println(v1);//控制台输出 zhōng guǒ rén！
+System.out.println(v1);//控制台输出 zhōng guó rén！
 
 //汉语句子->数字音调拼音
 String v2 = Bopomofo4j.pinyin("患难与共的兄弟！！",1, false, false, " ");
