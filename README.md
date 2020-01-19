@@ -1,4 +1,5 @@
 # Bopomofo4j
+[介绍](https://www.oschina.net/p/bopomofo4j)
 零依赖，纯Java开发的汉字->拼音转换,简体<->繁体互转,具备沙盒运行模式
 1. 实现汉字转拼音
 2. 实现汉语单词转拼音
